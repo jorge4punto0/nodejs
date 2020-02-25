@@ -168,3 +168,49 @@ Forma de envíar información:
 
 #### Estructura de una query
 Añadir: **?** al final de una URL, luego poner la estructura **nombre=valor**, si quiero poner más de uno van separados por **&** y de nuevo **clave=valor**.
+
+## Crear un servidor HTTP desde NodeJS.
+Iniciar npm y configurar:
+```
+npm init
+```
+
+Instalar npm y express:
+(express es una librería para creación de servidores)
+```
+npm i
+npm i express
+```
+Esta es la forma que niene **nodejs** de traer modulos de cualquier otro sitio.
+```
+const express = require('express');
+```
+o tambien sirve la sintaxis de es6:
+```
+import express from 'express';
+```
+Iniciamos express:
+```
+var app = express();
+```
+Pedir que devuelva algo para ver que funciona:
+```
+app.use('/', (req, res) => res.send('Hola soy Server'));
+
+o'
+
+app.use('/', function (req, res) { res.send('Hola soy Server')
+)};
+```
+Como la ponemos a ejecutarse y escuchar el server:
+```
+app.listen(3000);
+console.log('La aplicación está escuchando http://localhost:3000');
+```
+Finalmente ejecutamos en consola:
+```
+node server
+```
+
+
+

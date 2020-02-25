@@ -1,0 +1,30 @@
+{
+  "name": "nodejs",
+  "version": "0.1.0",
+  "description": "Este es un proyecto como telegram pero mejor!",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Jorgelisapa/nodejs.git"
+  },
+  "keywords": [
+    "Chat",
+    "mensajería",
+    "mensaje",
+    "telegram",
+    "comunicación"
+  ],
+  "author": "Jorge Salamanca - @Jorgelisapa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jorgelisapa/nodejs/issues"
+  },
+  "homepage": "https://github.com/Jorgelisapa/nodejs#readme"
+}
