@@ -181,7 +181,7 @@ Instalar npm y express:
 npm i
 npm i express
 ```
-Esta es la forma que niene **nodejs** de traer modulos de cualquier otro sitio.
+Esta es la forma que tiene **nodejs** de traer modulos de cualquier otro sitio.
 ```
 const express = require('express');
 ```
@@ -212,5 +212,13 @@ Finalmente ejecutamos en consola:
 node server
 ```
 
+## ¿Como pueden venir las peticiones?
 
+Una aplicación muy interesante para resolver peticiones HTTP es **'insomnia'**.
+
+Primero definimos 'router' de 'express':
+```
+const router = express.Router();
+```
+El 'router' permite separar cabeceras, metodos, por URL... Usando router con cualquiera de los métodos (get, post, ...). Con esto tenemos acceso a todos los metodos y ruas que queramos crear en nuestro servidor.
 
