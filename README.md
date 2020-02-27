@@ -244,3 +244,7 @@ const bodyParser = require('body-parser');
 ```
 
 
+## Información contextual: Leer las cabeceras
+
+Nos diran de donde viene la petición.
+
