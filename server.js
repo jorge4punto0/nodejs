@@ -1,5 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+
+const response = require('./network/response');
+
 const router = express.Router();
 
 
@@ -13,13 +16,17 @@ router.get('/message', function (req, res) {
     res.header({
         'custom-header': 'Nuestro valor personalizado',
     })
-    res.send('Lista de mensajes');
+    response.success(req, res, 'Lista de mensajes');
 });
 
 router.post('/message', function (req, res) {
     console.log(req.query);
-    console.log(req.body);
-    res.status(201).send({error: '', body: 'Creado correctamente'});
+    if (req.query.error == 'ok') {
+        response.error(req, res, 'Error simulado', 401);
+    } else { 
+        response.success(req, res, 'Creado correctamente', 201);
+    }
+
 });
 
 /* app.use('/', (req, res) => res.send('Hola soy Server hecho con nodejs')); */

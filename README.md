@@ -169,7 +169,7 @@ Forma de envíar información:
 #### Estructura de una query
 Añadir: **?** al final de una URL, luego poner la estructura **nombre=valor**, si quiero poner más de uno van separados por **&** y de nuevo **clave=valor**.
 
-## Crear un servidor HTTP desde NodeJS.
+## Crear un servidor HTTP desde NodeJS - v6
 Iniciar npm y configurar:
 ```
 npm init
@@ -212,7 +212,7 @@ Finalmente ejecutamos en consola:
 node server
 ```
 
-## ¿Como pueden venir las peticiones?
+## ¿Como pueden venir las peticiones? - v7
 
 Una aplicación muy interesante para resolver peticiones HTTP es **'insomnia'**.
 
@@ -222,7 +222,7 @@ const router = express.Router();
 ```
 El 'router' permite separar cabeceras, metodos, por URL... Usando router con cualquiera de los métodos (get, post, ...). Con esto tenemos acceso a todos los metodos y ruas que queramos crear en nuestro servidor.
 
-## Recibir información desde el cliente: Body y Query
+## Recibir información desde el cliente: Body y Query - v8
 
 Para evitar levantar y tumbar el servidor en cada cambio realizado en código es recomendable usar la herramienta/paquete 'nodemon' que permite en cada cambio actualizar todo. Instalalo con:
 ```
@@ -244,11 +244,11 @@ const bodyParser = require('body-parser');
 ```
 
 
-## Información contextual: Leer las cabeceras
+## Información contextual: Leer las cabeceras - v9
 
 Nos diran de donde viene la petición.
 
-## Tipos de respuesta: Vacía, plana, con datos y estructurada
+## Tipos de respuesta: Vacía, plana, con datos y estructurada -v10
 
 Es debido ponerle sentido a lo que se responde.
 
@@ -268,5 +268,8 @@ res.status(201).send({error: '', body: 'Creado correctamente'});
 ```
 Tecnicamente podemos devolver como respuesta lo que queramos. arrays, objetos y todo lo anidado que se quiera.
 
+## Respuestas coherentes - v11
 
+Es importante que las respuestas de una petición http sean coherentes, fácil de entender, fácil de usar. Para ello es importante **'crear un módulo'** que se encargue de responder nuestras peticiones. Ese modulo es 'response.js'
 
+Finalizados video 11, volver a ver...
