@@ -280,3 +280,21 @@ app.use('/app', express.static('public'));
 ```
 A partir de aquí todas las rutas que pidamos las va ir a buscar en la carpeta **'public'**. Usar la capeta 'public' es buena practica.
 Así que si ya tenemos una aplicacion de frontend la monemos en dicha carpeta y podemos servirla.
+
+## Errores: como presentarlos e implicaciones en seguridad.
+
+Es importante entender las implicaciones de construir un Backend. Al usuario es importante darle información mínima, no podemos andar dandole información de que por ejemplo existe un usuario. Es decir separar la información de los errores que es importante que sepamos a detalle y por otra parte la que se le ofrece al usuario que debe ser mínima, coherente y pertinente ya que esto podria tener implicaciones en la seguridad de nuestro sitio o para el mismo usuario. Para ello tenemos los **'logs'** para que nosotros si podamos saber con exactitud lo que ha pasado.
+
+Puedo tener en mi petición de 'response' los **'details'** y tener los detalles del error:
+```
+exports.error = function (req, res, message, status, details) {
+    console.error(details);
+    
+    res.status(status || 500).send({
+        error: message,
+        body: '',
+    });
+}
+```
+Que me va permitir? - Tener siempre un 'log' de lo sucedido y un mensaje que le doy al usuario que no tiene porqué ser el mismo.
+
