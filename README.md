@@ -222,3 +222,25 @@ const router = express.Router();
 ```
 El 'router' permite separar cabeceras, metodos, por URL... Usando router con cualquiera de los métodos (get, post, ...). Con esto tenemos acceso a todos los metodos y ruas que queramos crear en nuestro servidor.
 
+## Recibir información desde el cliente: Body y Query
+
+Para evitar levantar y tumbar el servidor en cada cambio realizado en código es recomendable usar la herramienta/paquete 'nodemon' que permite en cada cambio actualizar todo. Instalalo con:
+```
+sudo npm i -g nodemon
+```
+Luego de ello se ejecutará el server con:
+```
+nodemon server
+```
+### Body parser
+Es un modulo de express que permite trabajar con el body de la petición de forma sencilla. Lo instalamos con:
+```
+npm i body-parser
+```
+Agregando al documento (server.js):
+```
+const bodyParser = require('body-parser');
+
+```
+
+
