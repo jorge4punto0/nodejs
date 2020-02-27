@@ -248,3 +248,25 @@ const bodyParser = require('body-parser');
 
 Nos diran de donde viene la petición.
 
+## Tipos de respuesta: Vacía, plana, con datos y estructurada
+
+Es debido ponerle sentido a lo que se responde.
+
+Podemos enviar respuestas vacías, plana, con datos y estructurada. Respuestas:
+
+* Vacía
+```
+res.send();
+```
+* Plana
+```
+res.status(201).send();
+```
+* Estructurada (un objeto con una serie de información)
+```
+res.status(201).send({error: '', body: 'Creado correctamente'});
+```
+Tecnicamente podemos devolver como respuesta lo que queramos. arrays, objetos y todo lo anidado que se quiera.
+
+
+
