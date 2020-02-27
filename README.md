@@ -272,4 +272,11 @@ Tecnicamente podemos devolver como respuesta lo que queramos. arrays, objetos y 
 
 Es importante que las respuestas de una petición http sean coherentes, fácil de entender, fácil de usar. Para ello es importante **'crear un módulo'** que se encargue de responder nuestras peticiones. Ese modulo es 'response.js'
 
-Finalizados video 11, volver a ver...
+## Servir archivos estaticos
+
+Algo importante es servir estaticos (html, css, js) javascript y nodejs es buenisimo para servir cualquier tipo de petición porque no se bloquéa. Pa hacerlo debemos usar el servidor de estaticos de express:
+```
+app.use('/app', express.static('public'));
+```
+A partir de aquí todas las rutas que pidamos las va ir a buscar en la carpeta **'public'**. Usar la capeta 'public' es buena practica.
+Así que si ya tenemos una aplicacion de frontend la monemos en dicha carpeta y podemos servirla.

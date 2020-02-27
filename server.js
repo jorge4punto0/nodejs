@@ -29,7 +29,7 @@ router.post('/message', function (req, res) {
 
 });
 
-/* app.use('/', (req, res) => res.send('Hola soy Server hecho con nodejs')); */
+app.use('/app', express.static('public'));
 
 app.listen(3000);
 console.log('La aplicación está escuchando http://localhost:3000');
