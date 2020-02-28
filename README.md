@@ -298,3 +298,35 @@ exports.error = function (req, res, message, status, details) {
 ```
 Que me va permitir? - Tener siempre un 'log' de lo sucedido y un mensaje que le doy al usuario que no tiene porqué ser el mismo.
 
+## Conceptualmente: Rutas, controladores y bases de datos.
+
+¿cómo va a ser toda la arquitectura de nuestra aplicación?
+
+Separar conceptualmente rutas, controladores y almecenamiento y saber que es importante separarlo tanto en conceptos como en archivos.
+
+Ver de donde van a llegar las peticiones (servidor, ordenador, telefono, ...)
+
+* **Internet**: es de donde vienen las peticiones. el cual las envía al servidor.
+
+* **Servidor**:El que globaliza o contine los servicios de este. Dentro de el están:
+    * **server.js**: Que se encarga de comprobar que las peticiones son correctas para poder entrarlas en nuestro servidor o directamente cancelarlas si algo no anda bien. Tambien de encarga de configurar toda la info importante (**dase de datos, cabeceras, todo todo,...**) ¿Donde enviara server.js esa info? Para ello vamos a tener un archivo llamado **router.js**. 
+
+    * **router.js**: Este archivo es exclusivamente de red. Donde van a estar gestionadas todas nuestras rutas. Va ver hacia donde quiere ir la petición y llama al **'componente'** adecuado.
+
+    * **response.js.js**: Encargado de manejar TODAS las respuestas de nuestro server.
+
+    * **components**: Es una carpeta que aloja los diferente componentes de nuestro server y que irá cada uno en su propia carpeta la cual debería tener el nombre de sus componetes (message).
+        * **Carpeta message**: Va tener toda la info de nuestros mensajes (endpoints, acciones, lógica relacionada, donde se almacena, etc.)
+            * **network.js**: Es un archivo de rutas. Vamos a poner endpoints e info relacionado con el protocolo HTTP.
+            * **controller.js**: Es el que va tener toda la **lógica** de nuestro componente de mensajes (fecha, llamados a otros componentes modificar mensaje, comprobaciones, etc) Es lo que le llama **lógica de negócio**.
+            * **store.js**: Encargado exclusivamente de manejar las bases de datos. Donde y como se guarda la información.
+        * **Carpeta user**: Va tener toda la info de nuestroS usuaríos (endpoints, acciones, lógica relacionada, donde se almacena, etc.) De la misma manera que message pero para los usuarios.
+            * **network.js**
+            * **controller.js**
+            * **store.js**
+
+Una las grandes ventajas de sepapar conceptual y fisicamente componentes es que al momento de realizar modificaciones solo tendremos que tocar unos de los componentes en especifico.
+De este modo es 100% escalable y poder crecer todo lo que queramos.
+    
+
+    
