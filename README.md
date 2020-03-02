@@ -354,3 +354,9 @@ Por esto, cada uno de nuestros componentes, tendrá un archivo “network.js” 
 Así, lo que hace nuestro código (la funcionalidad) no está acoplado a unos requisitos de red, y puede ser reutilizado con otras fuentes de entrada (colas MQTT, una biblioteca externa, microservicios…).
 .
 La opción que planteas, llamarlo “interface” en lugar de network es también una opción válida. En caso de que tu carpeta se llame interface (o, quizá mejor, “interfaces”), llama a tu archivo “http-response.js” para poder generar nuevas interfaces de escucha o/y respuesta no HTTP.
+
+## Controladores: Definiendo la lógica del negocio
+
+Ya teniendo la capa de red separada, falta una parte de gan importancia, y es la **'lógica'**, que es lo que va suceder con nuestros archivos.
+
+controller : encargado de definir todo lo que se hace creando las funciones necesarias.
