@@ -360,3 +360,8 @@ La opción que planteas, llamarlo “interface” en lugar de network es tambié
 Ya teniendo la capa de red separada, falta una parte de gan importancia, y es la **'lógica'**, que es lo que va suceder con nuestros archivos.
 
 controller : encargado de definir todo lo que se hace creando las funciones necesarias.
+
+## Almacenando informacion en una base de datos - v17
+
+Una parte importante por agregar es donde guardaremos toda la información.
+Se separara toda la lógica de almacenamiento en **'store.js'** creando un **mock** para simular que todo anda bien.
