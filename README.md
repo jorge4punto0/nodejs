@@ -397,6 +397,10 @@ npm i mongoose
 
 ## MongoDB 2: Actualizar datos - v21
 
-Actualizacion de datos
-Consultas más especificas
-Como eliminar registros
+* Actualizacion de datos
+* Consultas más especificas
+* Como eliminar registros
+
+## MOngoDB 3: Consultar datos
+
+
