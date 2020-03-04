@@ -394,3 +394,9 @@ Creamos 'model.js' e instalamos 'mongoose'
 ```
 npm i mongoose
 ```
+
+## MongoDB 2: Actualizar datos - v21
+
+Actualizacion de datos
+Consultas más especificas
+Como eliminar registros
