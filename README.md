@@ -365,3 +365,32 @@ controller : encargado de definir todo lo que se hace creando las funciones nece
 
 Una parte importante por agregar es donde guardaremos toda la información.
 Se separara toda la lógica de almacenamiento en **'store.js'** creando un **mock** para simular que todo anda bien.
+
+## Tipos de DB: Relacionales y no relacionales - v18
+
+**Bases de Datos Relacionales:** no es una base de datos muy flexible, pero tiene a favor su gran soporte y el enorme desarrollo en herramientas para su uso. Si necesitamos cambiar un valor de un campo debemos hacerlo con todos los campos de nuestra BD, en cambio con NoSQL o No Relacional no es así.
+
+Postgre
+
+**Bases de Datos NO Relacionales:** son de bases de datos sin una tabla fija como las que sí se encuentran en las bases de datos relacionales, lo que permite una alta escalabilidad en ellas. Además, es abierta y por lo tanto flexible a diferentes tipos de datos y no necesita tantos recursos para ejecutarse; de hecho, el hardware necesario no cuesta mucho.
+Algunos tipos de NoSQL:
+
+* clave-valor
+* Documentales
+* Grafos
+
+## Creacion de la DB en MongoDB Atlas - v19
+
+
+## MongoDB 1: Almacenar y leer datos - v20
+
+MongoDB no tiene 'esquemas' pero no es buena practica trabajar sin esquemas porque no sabemos el tipo de informacion que habra en nuestra DB y es muy importante saber lo que almacenamos, como lo almacenamos y porqué.
+
+Para solucionarlo usaremos una librería llamada 'mongoose', que permite crear esquemas por software/código para nuestra DB y poder definir y cambiarlos de forma muy sencilla. Se encarga de hacer la validación de datos y en caso de que no validen no los guarda en la DB,  esto previene de ataques o fallos de consistencia dentro de la información o base DB.
+
+Nota: MongoDB es de esquema libre, lo que implica que cada registro puede tener un esquema de datos distinto.
+
+Creamos 'model.js' e instalamos 'mongoose'
+```
+npm i mongoose
+```

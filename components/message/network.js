@@ -14,7 +14,6 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-
     controller.addMessage(req.body.user, req.body.message)
     .then((fullMessage) => {
         response.success(req, res, fullMessage, 201);
