@@ -9,7 +9,6 @@ db.connect('mongodb+srv://db_user_telegramer:e9WvIgjhkFXy6taw@cluster0-eeq7m.mon
 console.log('[db] Conectada con exito')
 
 function addMessage(message) {
-/*     list.push(message); */
     const myMessage = new Model(message);
     const rta = myMessage.save();
     myMessage.save();
@@ -26,6 +25,12 @@ async function getMessages(filterUser) {
     return messages
 }
 
+function removeMessage(id) {
+    return Model.deleteOne({
+        _id: id
+    });
+}
+
 async function updateText(id, message) {
     const foundMessage = await Model.findOne({
         _id: id
@@ -40,7 +45,5 @@ module.exports = {
     add: addMessage,
     list: getMessages,
     updateText: updateText,
-    //get
-    //update
-    //delete
+    remove: removeMessage,
 }

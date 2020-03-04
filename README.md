@@ -401,6 +401,12 @@ npm i mongoose
 * Consultas más especificas
 * Como eliminar registros
 
-## MOngoDB 3: Consultar datos
+## MongoDB 3: Consultar datos - v22
+
+## MongoDB 3: Eliminar datos - v23
+
+
+
+
 
 
