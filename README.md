@@ -405,6 +405,9 @@ npm i mongoose
 
 ## MongoDB 3: Eliminar datos - v23
 
+## Gestionando conexiones a la DB desde API
+Vamos a refactorizar nuestro código para tener todo organizado de una mejor manera, creando el archivo 'db.js' donde se tendran todos los datos de nuestra conexión a la DB.
+
 
 
 

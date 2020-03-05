@@ -1,7 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const db = require('./db');
+
 const routes = require('./network/routes');
+
+db('mongodb+srv://db_user_telegramer:e9WvIgjhkFXy6taw@cluster0-eeq7m.mongodb.net/test?retryWrites=true&w=majority')
 
 var app = express();
 app.use(bodyParser.json());
