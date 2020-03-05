@@ -408,6 +408,10 @@ npm i mongoose
 ## Gestionando conexiones a la DB desde API
 Vamos a refactorizar nuestro código para tener todo organizado de una mejor manera, creando el archivo 'db.js' donde se tendran todos los datos de nuestra conexión a la DB.
 
+## Escalando la arquitectura: Múltiples entidades.
+
+Ahora mismo tenemos una conexion estable y backend potente, ahora lo que nos queda es escalarlo. Ahora mismo solo tenemos un componente y este es el de **'mensaje'** y este hace vreferencia a un usuario. Para ello será necesario crear un componente para **'usuario'**.
+
 
 
 
