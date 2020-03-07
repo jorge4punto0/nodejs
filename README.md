@@ -417,5 +417,10 @@ Ahora mismo tenemos una conexion estable y backend potente, ahora lo que nos que
 
 Opular información: referencia a otro dato que sera buscado e insertado en donde se requiere.
 
+## Como recibir ficheros desde Node.js
 
+Usaremos el metodo ```multer``` 
+```
+npm i multer
+```
 
