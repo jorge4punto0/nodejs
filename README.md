@@ -424,3 +424,6 @@ Usaremos el metodo ```multer```
 npm i multer
 ```
 
+## Guardar fichero en el servidor
+Lo primero a tener en cuenta es donde guasrdar nuestros ficheros y que podamos acceder a el. Por ejemplo la carpeta 'public/files/'
+
