@@ -3,26 +3,26 @@ const response = require('../../network/response');
 const controller = require('./controller');
 const router = express.Router();
 
-router.get('/', function (req, res) {
-    const filterMessages = req.query.user || null;
-    controller.getMessages(filterMessages)
-        .then((messageList) => {
-            response.success(req, res, messageList, 200);
+router.get('/:userId', function (req, res) {
+    controller.listChats(req.params.userId)
+        .then(users => {
+            response.success(req, res, users, 200);
         })
-        .catch(e => {
-            response.error(req, res, 'Internal error', 500, e);
-        })
+        .catch(err => {
+            response.error(req, res, 'Internal error', 500, err);
+        });
 });
 
 router.post('/', function (req, res) {
-    controller.addMessage(req.body.user, req.body.message)
-    .then((fullMessage) => {
-        response.success(req, res, fullMessage, 201);
+    controller.addChat(req.body.users)
+    .then(data => {
+        response.success(req, res, data, 201);
     })
-    .catch(e => {
-        response.error(req, res, 'Información invalida (para el cliente/usuario)', 400, 'Error en el controller');
+    .catch(err => {
+        response.error(req, res, 'Internal Error', 500, err);
     });
 });
+
 router.patch('/:id', function (req, res) {
     controller.updateMessage(req.params.id, req.body.message)
         .then((data) => {
