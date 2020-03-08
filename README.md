@@ -424,6 +424,16 @@ Usaremos el metodo ```multer```
 npm i multer
 ```
 
-## Guardar fichero en el servidor
+## Guardar fichero en el servidor - v28
 Lo primero a tener en cuenta es donde guasrdar nuestros ficheros y que podamos acceder a el. Por ejemplo la carpeta 'public/files/'
+
+
+## WebSockets: Qué son, porqué son interesantes y como usarlos.
+
+Es un protocolo que crea un tunel de información entre el usuario y el servidor el cual se quedará abierto hasta que el servidor y/o cliente cierre la conexión para pedir informacion en tiempo real. Este concepto ha sido tomado la robotica y redes. Esta permite enviar información en tiempo real.
+
+## Manejo de WebSockets con Nodejs - v30
+
+npm init -y
+npm i express socket.io
 
